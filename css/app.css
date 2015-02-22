@@ -77,6 +77,13 @@ input[type=button] {
     width: 250px;
 }
 
+.start-icon {
+    margin: 0 auto;
+    width: 115px;
+    position: relative;
+    top: 30px;
+}
+
 
 .carseat {
     margin-top: 50px;
@@ -100,10 +107,6 @@ img {
     left: 500px; 
 }
 
-.start {
-    position: relative;
-    top: 175px;
-}
 
 .helpButton
 {
