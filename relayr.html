@@ -4,6 +4,7 @@
     <title>Relayr Test Page</title>
 
     <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     
     <script type="text/javascript">
         var relayr = RELAYR.init({
@@ -17,6 +18,14 @@
             token: "vTP_EUdBJzdrz.digPRyNM82VEuLfqY6",
             incomingData: function(data){
             console.log("sensor",data);
+            console.log("Accelerometer X:"+data.accel.x+" Y:"+data.accel.y+" Z:"+data.accel.z);
+            console.log("Gyro X:"+data.gyro.x+" Y:"+data.gyro.y+" Z:"+data.gyro.z);
+            $('#accel-x').text(data.accel.x);
+            $('#accel-y').text(data.accel.y);
+            $('#accel-z').text(data.accel.z);
+            $('#gyro-x').text(data.gyro.x);
+            $('#gyro-y').text(data.gyro.y);
+            $('#gyro-z').text(data.gyro.z);
         }
         });   
     </script>
@@ -24,6 +33,16 @@
 </head>
 
 <body>
+        Accelerometer
+    <div id="accel-x">Nan</div>
+    <div id="accel-y">Nan</div>
+    <div id="accel-z">Nan</div>
+    Gyro
+
+    <div id="gyro-x">Nan</div>
+    <div id="gyro-y">Nan</div>
+    <div id="gyro-z">Nan</div>
+
 </body>
 
 </html>
