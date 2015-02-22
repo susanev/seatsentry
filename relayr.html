@@ -14,9 +14,11 @@
         relayr.devices().getDeviceData(
         {
             deviceId: "67c656c3-08d3-43ff-be2a-d434f07dd61e", 
-            token: token,
+            token: "vTP_EUdBJzdrz.digPRyNM82VEuLfqY6",
             incomingData: function(data){
-            console.log("sensor",data);
+            //console.log("sensor",data);
+            console.log("Accelerometer X:"+data.accel.x+" Y:"+data.accel.y+" Z:"+data.accel.z);
+            console.log("Gyro X:"+data.gyro.x+" Y:"+data.gyro.y+" Z:"+data.gyro.z);
         }
         });   
     </script>
@@ -24,14 +26,6 @@
 </head>
 
 <body>
-    <script id="67c656c3-08d3-43ff-be2a-d434f07dd61e">
-        var sId="67c656c3-08d3-43ff-be2a-d434f07dd61e",iframe=document.createElement("iframe");
-        iframe.src="//developer.relayr.io/snippet/#"+sId;iframe.style.width="250";
-        iframe.style.height="600";iframe.id="s-"+sId;iframe.frameBorder=0;iframe.scrolling="no";
-        document.body.appendChild(iframe);
-        document.getElementById(""+sId).parentNode.appendChild(iframe);
-        function aSize(a,b){document.getElementById("s-"+b).style.height=a+"px"};
-    </script>
 </body>
 
 </html>

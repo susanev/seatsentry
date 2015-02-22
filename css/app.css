@@ -35,7 +35,7 @@ input, textarea  {
 body {
     /* margin: 0.5rem ; */
     background: #fff;
-    color: #6dc58f ;
+    color: #164468;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -63,16 +63,18 @@ h1 {
 
 input[type=button] {
     margin-top: 50px;
-    width: 150px;
-    height: 75px;
+    width: 175px;
+    height: 50px;
     background: #8fd700;
-    border: none;
     font-size: 24px;
     color: #404040;
+    border: 1px solid #8fd700;
+    border-radius: 3px;
 }
 
 .icons {
-    margin: 0 30px;
+    margin: 0 auto;
+    width: 250px;
 }
 
 
@@ -82,7 +84,6 @@ input[type=button] {
 
 .instructions {
     font-size: 16px;
-    color: #6dc58f;
     font-style: italic;
 }
 
