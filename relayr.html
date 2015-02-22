@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relayr Test Page</title>
+
+    <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
+    
+    <script type="text/javascript">
+        var relayr = RELAYR.init({
+            appId: "71407337-1f21-406a-9529-e58151979915"
+        });
+        
+        // accelerometer
+        relayr.devices().getDeviceData(
+        {
+            deviceId: "67c656c3-08d3-43ff-be2a-d434f07dd61e", 
+            token: token,
+            incomingData: function(data){
+            console.log("sensor",data);
+        }
+        });   
+    </script>
+    
+</head>
+
+<body>
+    <script id="67c656c3-08d3-43ff-be2a-d434f07dd61e">
+        var sId="67c656c3-08d3-43ff-be2a-d434f07dd61e",iframe=document.createElement("iframe");
+        iframe.src="//developer.relayr.io/snippet/#"+sId;iframe.style.width="250";
+        iframe.style.height="600";iframe.id="s-"+sId;iframe.frameBorder=0;iframe.scrolling="no";
+        document.body.appendChild(iframe);
+        document.getElementById(""+sId).parentNode.appendChild(iframe);
+        function aSize(a,b){document.getElementById("s-"+b).style.height=a+"px"};
+    </script>
+</body>
+
+</html>
