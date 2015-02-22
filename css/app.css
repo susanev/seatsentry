@@ -34,12 +34,12 @@ input, textarea  {
 
 body {
     /* margin: 0.5rem ; */
-    background: white ;
-    color: black ;
+    background: #164468;
+    color: #6dc58f ;
+    font-family: 'Roboto', sans-serif;
 }
 
-p
-{
+p{
     text-align: center;
     display: block;
     margin: auto;
@@ -48,4 +48,25 @@ p
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.welcome {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+input[type=button] {
+    position: relative;
+    top: 100px;
+    width: 150px;
+    height: 75px;
+    background: #8fd700;
+    border: none;
+    font-size: 24px;
+    color: #404040;
 }
