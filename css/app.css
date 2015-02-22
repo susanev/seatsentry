@@ -105,3 +105,10 @@ img {
     top: 175px;
 }
 
+.helpButton
+{
+    position: fixed;
+    top: 20px;
+    right: 5px;
+}
+
