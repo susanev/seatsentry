@@ -16,7 +16,9 @@
             deviceId: "67c656c3-08d3-43ff-be2a-d434f07dd61e", 
             token: "vTP_EUdBJzdrz.digPRyNM82VEuLfqY6",
             incomingData: function(data){
-            console.log("sensor",data);
+            //console.log("sensor",data);
+            console.log("Accelerometer X:"+data.accel.x+" Y:"+data.accel.y+" Z:"+data.accel.z);
+            console.log("Gyro X:"+data.gyro.x+" Y:"+data.gyro.y+" Z:"+data.gyro.z);
         }
         });   
     </script>
