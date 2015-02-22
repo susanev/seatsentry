@@ -34,7 +34,7 @@ input, textarea  {
 
 body {
     /* margin: 0.5rem ; */
-    background: #164468;
+    background: #fff;
     color: #6dc58f ;
     font-family: 'Roboto', sans-serif;
 }
@@ -52,6 +52,7 @@ p{
 
 h1 {
     font-size: 36px;
+    text-align: center;
 }
 
 .welcome {
@@ -61,8 +62,7 @@ h1 {
 }
 
 input[type=button] {
-    position: relative;
-    top: 100px;
+    margin-top: 50px;
     width: 150px;
     height: 75px;
     background: #8fd700;
@@ -70,3 +70,37 @@ input[type=button] {
     font-size: 24px;
     color: #404040;
 }
+
+.icons {
+    margin: 0 30px;
+}
+
+
+.carseat {
+    margin-top: 50px;
+}
+
+.instructions {
+    font-size: 16px;
+    color: #6dc58f;
+    font-style: italic;
+}
+
+img {
+    border: none;
+    -webkit-transition: 1s;
+}
+
+.begin { 
+    left: 0px; 
+}
+
+.end { 
+    left: 500px; 
+}
+
+.start {
+    position: relative;
+    top: 175px;
+}
+
