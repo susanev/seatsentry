@@ -23,6 +23,20 @@
     <script src="js/init-app.js"></script> 
 
     <script src="xdk/init-dev.js"></script>
+
+
+    <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/shake.js"></script>
+
+    <script type="text/javascript">
+        startShakeDetection(function(shaked){
+            if(shaked){
+                console.log('Shake Detected!');
+                window.location.href = "http://seatsentry.azurewebsites.net/page3b.html";
+            }
+        });
+    </script>
 </head>
 
 

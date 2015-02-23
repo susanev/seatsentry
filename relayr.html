@@ -5,8 +5,19 @@
 
     <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/shake.js"></script>
     
     <script type="text/javascript">
+        startShakeDetection(function(shaked){
+            if(shaked){
+                $('#shaked').text("YOUR BABY IS SHAKING");
+            }
+            else {
+                $('#shaked').text("Your baby is safe.");
+            }
+        })
+/*        var lastVals = [0.0,0.0,0.0,0.0,0.0];
+
         var relayr = RELAYR.init({
             appId: "71407337-1f21-406a-9529-e58151979915"
         });
@@ -26,14 +37,45 @@
             $('#gyro-x').text(data.gyro.x);
             $('#gyro-y').text(data.gyro.y);
             $('#gyro-z').text(data.gyro.z);
+            lastVals.push(data.accel.x);
+            lastVals.shift();
+
+            // accel-x if value switches from positive to negative greatly it's shaking
+            // a shake is defined as switch from negative to positive and back (or vice versa)
+            if(detectShake()) {
+                $('#shaked').text("YOUR BABY IS SHAKING");
+            }
+            else {
+                $('#shaked').text("Your baby is safe.");
+            }
         }
         });   
+
+        function detectShake() {
+            var highest = 0.0;
+            var lowest = 0.0;
+            // find the highest positive number and lowest negative
+            // if the difference beween them is > .5, that's a shake
+            for(var i=0; i<lastVals.length; i++) {
+                var val = lastVals[i];
+                if(val > highest)
+                    highest = val;
+                else if(val < lowest)
+                    lowest = val;
+            }
+            if(highest < 0.1 || lowest > -0.1)
+                return false;
+            if(highest - lowest > .5)
+                return true
+
+            return false;
+        }*/
     </script>
     
 </head>
 
 <body>
-        Accelerometer
+    <!--    Accelerometer
     <div id="accel-x">Nan</div>
     <div id="accel-y">Nan</div>
     <div id="accel-z">Nan</div>
@@ -41,8 +83,9 @@
 
     <div id="gyro-x">Nan</div>
     <div id="gyro-y">Nan</div>
-    <div id="gyro-z">Nan</div>
+    <div id="gyro-z">Nan</div>-->
 
+    <div id="shaked">Not Connected</div>
 </body>
 
 </html>
