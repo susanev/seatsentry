@@ -11,6 +11,7 @@ img.onclick =
 function onHelp()
 {
     createSession();
+    window.location.href = "http://seatsentry.azurewebsites.net/help.html";
 };
 
 div.appendChild(img);
