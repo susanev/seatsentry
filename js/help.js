@@ -10,7 +10,7 @@ img.width = 30;
 img.onclick = 
 function onHelp()
 {
-    
+    createSession();
 };
 
 div.appendChild(img);
