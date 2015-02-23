@@ -4,10 +4,10 @@ var xE911Id = "905d:4e47:1f70:6fa9";
 var recipient = "3608701373";
 
 function log(text){
-	document.getElementById('progress').innerHTML = document.getElementById('progress').innerHTML + '<br>' +text;
+	console.log(text);
 }
 function logEvent(text){
-	document.getElementById('event').innerHTML = document.getElementById('event').innerHTML + '<br>' +text;
+	console.log(text);
 }
 var GW_URL = "https://api.att.com",SERVICE_NAME="RTC",version="v1", REGISTER_RESOURCE = "sessions";
 var registerURL = GW_URL + "/" + SERVICE_NAME + "/" + version + "/" + REGISTER_RESOURCE;
