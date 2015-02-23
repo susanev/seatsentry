@@ -4,7 +4,7 @@ div.id = 'HelpButton';
 div.className = 'helpButton';
 
 var img = document.createElement('img');
-img.src = '../images/questionmark.png';
+img.src = '../images/question-mark.png';
 img.height = 30;
 img.width = 30;
 img.onclick = 

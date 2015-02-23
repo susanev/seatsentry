@@ -150,6 +150,5 @@ img {
 #refresh {
     width:250px;
     height:250px;
-    background:url('images/search.png');
-    -webkit-animation: rotate 3s linear infinite;
+    -webkit-animation: rotate 3s linear infinite;   
 }
