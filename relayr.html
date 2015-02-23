@@ -5,10 +5,18 @@
 
     <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/shake.js"></script>
     
     <script type="text/javascript">
-
-        var lastVals = [0.0,0.0,0.0,0.0,0.0];
+        startShakeDetection(function(shaked){
+            if(shaked){
+                $('#shaked').text("YOUR BABY IS SHAKING");
+            }
+            else {
+                //$('#shaked').text("Your baby is safe.");
+            }
+        })
+/*        var lastVals = [0.0,0.0,0.0,0.0,0.0];
 
         var relayr = RELAYR.init({
             appId: "71407337-1f21-406a-9529-e58151979915"
@@ -61,13 +69,13 @@
                 return true
 
             return false;
-        }
+        }*/
     </script>
     
 </head>
 
 <body>
-        Accelerometer
+    <!--    Accelerometer
     <div id="accel-x">Nan</div>
     <div id="accel-y">Nan</div>
     <div id="accel-z">Nan</div>
@@ -75,9 +83,9 @@
 
     <div id="gyro-x">Nan</div>
     <div id="gyro-y">Nan</div>
-    <div id="gyro-z">Nan</div>
+    <div id="gyro-z">Nan</div>-->
 
-    <div id="shaked">No shake!</div>
+    <div id="shaked">Not Connected</div>
 </body>
 
 </html>
