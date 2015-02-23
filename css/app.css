@@ -33,6 +33,7 @@ input, textarea  {
 }
 
 body {
+    height: 517px;
     background-repeat: no-repeat;
     /* margin: 0.5rem ; */
     /* IE10 Consumer Preview */ 
@@ -133,3 +134,22 @@ img {
     right: 5px;
 }
 
+.name {
+    font-weight: 700px;
+}
+
+@-webkit-keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#refresh {
+    width:250px;
+    height:250px;
+    background:url('images/search.png');
+    -webkit-animation: rotate 3s linear infinite;
+}
